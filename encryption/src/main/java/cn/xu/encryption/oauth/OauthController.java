@@ -24,6 +24,7 @@ public class OauthController {
 	@Autowired
 	private WeiXinUtils weiXinUtils;
 
+
 	// 1.生成授权链接 重定向跳转到微信开放平台
 	@RequestMapping("/authorizedUrl")
 	public String authorizedUrl() {

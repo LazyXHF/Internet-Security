@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/encryption/encryption.iml" filepath="$PROJECT_DIR$/encryption/encryption.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/互联网安全架构.iml" filepath="$PROJECT_DIR$/.idea/互联网安全架构.iml" />
-    </modules>
-  </component>
-</project>

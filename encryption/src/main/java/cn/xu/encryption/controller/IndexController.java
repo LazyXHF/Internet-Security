@@ -23,6 +23,10 @@ public class IndexController extends BaseApiService {
 	@RequestMapping("/indexPage")
 	public ResponseBase indexPage(String userName) {
 		System.out.println("userName:" + userName);
+
+
+
+
 //		URLEncoder.encode()
 		return setResultSuccessData(userName);
 	}

@@ -18,14 +18,27 @@ public class BaseRedisService {
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 
+
 	public void setString(String key, Object data, Long timeout) {
-		if (data instanceof String) {
-			String value = (String) data;
-			stringRedisTemplate.opsForValue().set(key, value);
+		stringRedisTemplate.setEnableTransactionSupport(true);
+		try {
+			//开启事务
+			stringRedisTemplate.multi();
+			if (data instanceof String) {
+				String value = (String) data;
+				stringRedisTemplate.opsForValue().set(key, value);
+			}
+			if (timeout != null) {
+				stringRedisTemplate.expire(key, timeout, TimeUnit.SECONDS);
+			}
+		}catch (Exception e){
+			//事务回滚
+			stringRedisTemplate.discard();
+		}finally {
+
+			stringRedisTemplate.exec();
 		}
-		if (timeout != null) {
-			stringRedisTemplate.expire(key, timeout, TimeUnit.SECONDS);
-		}
+
 	}
 
 	public Object getString(String key) {

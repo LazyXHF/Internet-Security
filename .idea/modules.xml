@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/api-a/api-a.iml" filepath="$PROJECT_DIR$/api-a/api-a.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-b/api-b.iml" filepath="$PROJECT_DIR$/api-b/api-b.iml" />
       <module fileurl="file://$PROJECT_DIR$/encryption/encryption.iml" filepath="$PROJECT_DIR$/encryption/encryption.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
